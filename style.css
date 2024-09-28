@@ -1,0 +1,334 @@
+*{
+    margin: 0px;
+    padding: 0px;
+}
+
+body, html{
+    background-color: rgb(237, 237, 237);
+    overflow-x: hidden;
+    width: 100%;
+    font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+
+header{
+    background-color: rgb(0, 117, 227);
+    padding: 20px 60px 0px 60px;
+    width:auto;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+#name{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+#name h1{
+    font-size: 40px;
+    text-shadow: 1px 1px 10px white;
+}
+
+#name h4{
+    color: white;
+    font-size: 20px;
+}
+
+#name h4:hover{
+    text-shadow: 1px 1px 6px white;
+}
+
+#icons{
+    width: 100%;
+    height: max-content;
+    display: flex;
+    justify-content: space-around;
+    border-top: 1px solid white;
+    padding: 10px;
+}
+
+#icons div{
+    height: 40px;
+    padding: 0px 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 7px;
+    font-size: 14px;
+}
+
+#icons div:hover{
+    border-bottom: 2px solid white;
+    transition: all 100ms ease-in;
+    border-bottom-left-radius: 20px;
+    border-bottom-right-radius: 20px;
+}
+
+#icons div a{
+    text-decoration: none;
+    color: white;
+    font-weight: bold;
+}
+
+#content{
+    background-color: white;
+    padding: 20px 60px;
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+    border-top-left-radius: 20px;
+    border-top-right-radius: 20px;
+}
+
+#profile, #hobby{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: start;
+    gap: 10px;
+}
+
+
+#profile div, #exp div, #edu div, #skills div, #projects div, #hobby div{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+}
+
+#exp-edu-tab{
+    display: flex;
+    justify-content:space-between;
+    gap: 8px;
+}
+
+#exp, #edu{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: start;
+    gap: 10px;
+    width: 50%;
+    box-shadow: 0px 2px 8px rgb(180, 180, 180);
+    padding: 12px;
+    border-radius: 20px;
+}
+
+#bottom, #profile{
+    display: flex;
+    box-shadow: 0px 2px 8px rgb(180, 180, 180);
+    padding: 18px;
+    border-radius: 20px;
+    gap: 10px;
+}
+
+#hobby{
+    display: flex;
+    box-shadow: 0px 2px 8px rgb(180, 180, 180);
+    padding: 18px;
+    border-radius: 20px;
+    gap: 25px;
+    margin-bottom: 30px;
+}
+
+#hobby #text{
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+}
+
+#hobby #text div:hover{
+    transition: all 0.1s ease-in;
+    scale: 1.1;
+    cursor: pointer;
+}
+
+@media (max-width:425px){
+    #hobby #title{
+        font-size: 12px;
+    }
+    #hobby #text{
+        display: flex;
+    }
+}
+
+#profile:hover ,#exp:hover, #edu:hover, #bottom:hover, #hobby:hover{
+    box-shadow: 0px 2px 8px rgb(0, 117, 227);
+}
+
+#skills{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: start;
+    gap: 10px;
+    width: 40%; 
+    border-right: 2px solid gray;
+}
+
+#projects{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: start;
+    gap: 10px;
+    margin-left: 20px;
+    width: 60%;
+}
+
+#exp #text, #edu #text, #skills #text, #projects #text{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: start;
+}
+
+#projects #text a{
+    text-decoration: none;
+    color: black;
+}
+
+#projects #text a:hover{
+    text-decoration: 2px underline;
+    color: rgb(0, 117, 227);
+    transition: all 0.1s ease-in-out;
+}
+
+.progress{
+    width: 300px;
+    height: 8px;
+    border: 2px solid rgb(0, 117, 227);
+    position: relative;
+}
+
+.html-progress-bar{
+    width: 94%;
+    height: 8px;
+    position: absolute;
+    left: 0px;
+    background-color: rgb(0, 117, 227);
+}
+
+@keyframes progress-bar {
+    from {
+        width: 0%;
+    }
+    to {
+        width: 94%;
+    }
+}
+
+.progress:hover .html-progress-bar {
+    animation: progress-bar 1s ease-in;
+}
+
+.css-progress-bar{
+    width: 85%;
+    height: 8px;
+    position: absolute;
+    left: 0px;
+    background-color: rgb(0, 117, 227);
+    transition: width 0.3s;
+}
+
+@keyframes progress-bar {
+    from {
+        width: 0%;
+    }
+    to {
+        width: 85%;
+    }
+}
+
+.progress:hover .css-progress-bar {
+    animation: progress-bar 1s ease-in;
+}
+
+.js-progress-bar{
+    width: 78%;
+    height: 8px;
+    position: absolute;
+    left: 0px;
+    background-color: rgb(0, 117, 227);
+    transition: width 0.3s;
+}
+
+@keyframes progress-bar {
+    from {
+        width: 0%;
+    }
+    to {
+        width: 78%;
+    }
+}
+
+.progress:hover .js-progress-bar {
+    animation: progress-bar 1s ease-in;
+}
+
+.react-progress-bar{
+    width: 64%;
+    height: 8px;
+    position: absolute;
+    left: 0px;
+    background-color: rgb(0, 117, 227);
+    transition: width 0.3s;
+}
+
+@keyframes progress-bar {
+    from {
+        width: 0%;
+    }
+    to {
+        width: 64%;
+    }
+}
+
+.progress:hover .react-progress-bar {
+    animation: progress-bar 1s ease-in;
+}
+
+
+@media (max-width:1020px){
+    header{
+        padding: 20px 5px;
+    }
+    #name h1{
+        font-size: 20px;
+    }
+    #icons{
+        flex-wrap: wrap;
+    }
+    #content{
+        padding: 10px;
+    }
+    #exp-edu-tab{
+        display: flex;
+        flex-wrap: wrap;
+    }
+    #exp, #edu, #projects{
+        width: 100%;
+        margin: 0px;
+    }
+    #bottom{
+        display: flex;
+        flex-wrap: wrap;
+        gap: 60px;
+    }
+    #skills{
+        border: 0px;
+        width: 100%;
+    }
+    #skills #text{
+        width: 100%;
+    }
+    .progress{
+        width:100%;
+    }
+}
