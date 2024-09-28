@@ -35,8 +35,8 @@ header{
 }
 
 #name h4{
-    color: white;
     font-size: 20px;
+    color: white;
 }
 
 #name h4:hover{
@@ -77,7 +77,7 @@ header{
 
 #content{
     background-color: white;
-    padding: 20px 60px;
+    padding: 20px 60px 10px 60px;
     display: flex;
     flex-direction: column;
     gap: 40px;
@@ -133,7 +133,6 @@ header{
     padding: 18px;
     border-radius: 20px;
     gap: 25px;
-    margin-bottom: 30px;
 }
 
 #hobby #text{
@@ -147,15 +146,6 @@ header{
     transition: all 0.1s ease-in;
     scale: 1.1;
     cursor: pointer;
-}
-
-@media (max-width:425px){
-    #hobby #title{
-        font-size: 12px;
-    }
-    #hobby #text{
-        display: flex;
-    }
 }
 
 #profile:hover ,#exp:hover, #edu:hover, #bottom:hover, #hobby:hover{
@@ -294,19 +284,48 @@ header{
     animation: progress-bar 1s ease-in;
 }
 
+#footer{
+    display: flex;
+    justify-content: center;
+    align-items: start;
+}
+
+#footer h4:hover{
+    text-shadow: 1px 1px 6px rgba(0, 117, 227, 0.476);
+    scale: 1.1;
+    transition: all 100ms ease-in;
+}
+
+
+@media (max-width:425px){
+    #hobby #title{
+        font-size: 14px;
+    }
+    #hobby #text{
+        display: flex;
+        gap: 20px;
+    }
+    #footer{
+        font-size: 12px;
+    }
+}
 
 @media (max-width:1020px){
     header{
-        padding: 20px 5px;
+        padding: 20px 5px 0px 5px;
     }
     #name h1{
         font-size: 20px;
+    }
+    #name h4{
+        margin-top: 5px;
+        font-size: 14px;
     }
     #icons{
         flex-wrap: wrap;
     }
     #content{
-        padding: 10px;
+        padding: 10px 10px 0px 10px;
     }
     #exp-edu-tab{
         display: flex;
